@@ -28,14 +28,14 @@ jobs:
         uses: actions/setup-node@v3.0.0
         with:
           version: 12
-      - name: GitHub Action for Yarn
-        uses: Borales/actions-yarn@v2.3.0
+      - name: GitHub Action for npm
+        uses: c-hive/gha-npm-cache@v1
         with:
           # Yarn command
           cmd: install
           
       - name: building npm
-        run: sudo npm run build
+        run: npm run build
         
       - name: install surge
         run: npm install -global surge
